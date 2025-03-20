@@ -1,0 +1,24 @@
+<h2 class="titulo">Catálogo de Productos</h2>
+
+<div class="productos-grid">
+  <div *ngFor="let producto of productos" class="producto-card">
+    <img [src]="producto.imagen" alt="{{producto.nombre}}" class="producto-img" />
+    <h3 class="producto-nombre">{{ producto.nombre }}</h3>
+    <p class="producto-precio">Precio: <span>${{ producto.precio }}</span></p>
+    <button (click)="agregarAlCarrito(producto)" class="btn-agregar">
+      🛒 Agregar al carrito
+    </button>
+  </div>
+</div>
+
+<div class="carrito-btn-container">
+  <button (click)="irAlCarrito()" class="btn-carrito">
+    Ver Carrito 🛍️
+  </button>
+</div>
+
+<div class="inventario-btn-container">
+  <button (click)="irAlInventario()" class="btn-inventario">
+    Ver Inventario 🗃️
+  </button>
+</div>

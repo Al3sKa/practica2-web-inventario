@@ -1,0 +1,31 @@
+<h2 class="titulo-carrito">🛒 Carrito de Compra</h2>
+
+<div *ngIf="carrito.length > 0" class="carrito-container">
+  <ul class="carrito-lista">
+    <li *ngFor="let producto of carrito; let i = index" class="carrito-item">
+      <div class="producto-imagen">
+        <img [src]="producto.imagen" alt="{{ producto.nombre }}">
+      </div>
+      <div class="producto-info">
+        <span class="producto-nombre">{{ producto.nombre }}</span>
+        <span class="producto-precio">Precio unitario: ${{ producto.precio }}</span>
+        <span class="producto-cantidad">Cantidad: {{ producto.cantidad }}</span>
+        <span class="producto-subtotal"> / Subtotal: ${{ producto.precio * producto.cantidad }}</span>
+      </div>
+      <div class="acciones-producto">
+        <button (click)="agregarUnidad(i)" class="btn-agregar-unidad" style="margin-right: 10px;">➕ Añadir unidad</button>
+        <button (click)="eliminarProducto(i)" class="btn-eliminar">❌ Eliminar</button>
+      </div>
+    </li>
+  </ul>
+
+  <div class="acciones-carrito">
+    <button (click)="generarXML()" class="btn-recibo">📄 Generar Recibo (XML)</button>
+  </div>
+</div>
+
+<p *ngIf="carrito.length === 0" class="carrito-vacio">El carrito está vacío 😢</p>
+
+<div class="volver-btn-container">
+  <button (click)="volverAComprar()" class="btn-volver">🔙 Volver a Comprar</button>
+</div>

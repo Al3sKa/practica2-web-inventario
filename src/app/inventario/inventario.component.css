@@ -1,0 +1,81 @@
+.lista-inventario {
+    list-style: none;
+    padding: 0;
+    font-family: 'Brush Script MT', cursive;
+  }
+
+.inventario-title {
+  font-family: 'Brush Script MT', cursive;
+}
+  
+.inventario-subtitle {
+  font-family: 'Brush Script MT', cursive;
+}
+  
+
+  .lista-inventario li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .info-producto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .imagen-producto {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  
+  .form-nuevo-producto, .form-editar-producto {
+    margin: 20px 0;
+  }
+  
+  .form-nuevo-producto input, .form-editar-producto input {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  .acciones button {
+    margin-right: 5px;
+  }
+  
+  .btn-editarproducto {
+    
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-eliminarproducto {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .btn-agregarproducto {
+    background-color: #28a745;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  
